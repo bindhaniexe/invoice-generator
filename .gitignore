@@ -13,3 +13,4 @@ tmp
 .codegraph
 .kiro
 *.tsbuildinfo
+.agents
