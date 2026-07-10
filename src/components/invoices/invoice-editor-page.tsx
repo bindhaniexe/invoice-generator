@@ -227,7 +227,7 @@ export function InvoiceEditorPage({ invoiceId }: { invoiceId?: string }) {
         ) : null}
       </div>
 
-      <div className="app-section grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(420px,520px)]">
+      <div className="app-section flex flex-col gap-6">
         <div className="no-print space-y-6">
           <section className="section-panel p-5 md:p-6">
             <SectionHeading title="Invoice details" />
@@ -484,7 +484,7 @@ export function InvoiceEditorPage({ invoiceId }: { invoiceId?: string }) {
           </section>
         </div>
 
-        <aside className="xl:sticky xl:top-28 xl:self-start">
+        <aside>
           <div className="no-print mb-3 flex items-center justify-between">
             <h2 className="text-base font-semibold text-ink">Live preview</h2>
             <p className="text-sm text-muted">A4 output</p>
