@@ -18,7 +18,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-canvas text-body">
-      <header className="app-chrome no-print sticky top-0 z-40 border-b border-hairline bg-white/95 backdrop-blur">
+      <header className="app-chrome no-print sticky top-0 z-50 border-b border-hairline bg-white backdrop-blur">
         <div className="app-section flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3 text-ink">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-rausch text-white">

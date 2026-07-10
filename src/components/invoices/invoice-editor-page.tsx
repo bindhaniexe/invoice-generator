@@ -177,8 +177,8 @@ export function InvoiceEditorPage({ invoiceId }: { invoiceId?: string }) {
 
   return (
     <div className="py-8">
-      <div className="app-section no-print mb-6">
-        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <div className="app-section no-print mb-8">
+        <div className="flex flex-col gap-4">
           <div>
             <Button asChild variant="tertiary" className="-ml-3">
               <Link href="/">
@@ -186,31 +186,36 @@ export function InvoiceEditorPage({ invoiceId }: { invoiceId?: string }) {
                 Dashboard
               </Link>
             </Button>
-            <h1 className="mt-2 text-[28px] font-bold leading-tight text-ink">
-              {invoiceId ? "Edit invoice" : "Create invoice"}
-            </h1>
-            <p className="mt-2 text-sm text-muted">
-              Live preview stays aligned with the A4 export target.
-            </p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <Button type="button" variant="secondary" onClick={() => window.print()}>
-              <Printer className="h-4 w-4" aria-hidden="true" />
-              Print
-            </Button>
-            <Button
-              type="button"
-              variant="secondary"
-              disabled={exporting}
-              onClick={() => void handleDownload()}
-            >
-              <Download className="h-4 w-4" aria-hidden="true" />
-              {exporting ? "Exporting..." : "Download PDF"}
-            </Button>
-            <Button type="button" disabled={saving} onClick={() => void handleSave()}>
-              <Save className="h-4 w-4" aria-hidden="true" />
-              {saving ? "Saving..." : "Save invoice"}
-            </Button>
+          
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
+            <div>
+              <h1 className="text-[28px] font-bold leading-tight text-ink">
+                {invoiceId ? "Edit invoice" : "Create invoice"}
+              </h1>
+              <p className="mt-1.5 text-sm text-muted">
+                Live preview stays aligned with the A4 export target.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Button type="button" variant="secondary" onClick={() => window.print()}>
+                <Printer className="h-4 w-4" aria-hidden="true" />
+                Print
+              </Button>
+              <Button
+                type="button"
+                variant="secondary"
+                disabled={exporting}
+                onClick={() => void handleDownload()}
+              >
+                <Download className="h-4 w-4" aria-hidden="true" />
+                {exporting ? "Exporting..." : "Download PDF"}
+              </Button>
+              <Button type="button" disabled={saving} onClick={() => void handleSave()}>
+                <Save className="h-4 w-4" aria-hidden="true" />
+                {saving ? "Saving..." : "Save invoice"}
+              </Button>
+            </div>
           </div>
         </div>
 
